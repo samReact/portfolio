@@ -1,26 +1,25 @@
-import { Nav } from 'react-bootstrap';
+import { Nav, Navbar } from 'react-bootstrap';
 
 const NavBar = () => (
-  <Nav
-    defaultActiveKey="/home"
-    as="ul"
-    // bg="dark"
-    style={{
-      backgroundColor: 'transparent',
-      position: 'absolute',
-      zIndex: '100',
-    }}
-  >
-    <Nav.Item as="li">
-      <Nav.Link href="/home">Home</Nav.Link>
-    </Nav.Item>
-    <Nav.Item as="li">
-      <Nav.Link eventKey="link-1">Work</Nav.Link>
-    </Nav.Item>
-    <Nav.Item as="li">
-      <Nav.Link eventKey="link-2">Contact</Nav.Link>
-    </Nav.Item>
-  </Nav>
+  <Navbar expand="lg" fixed="top" className="text-white">
+    <Navbar.Brand href="#home" style={{ color: 'red' }}>
+      SL
+    </Navbar.Brand>
+    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Collapse id="basic-navbar-nav">
+      <Nav className="mr-auto text-white">
+        <Nav.Link className="text-white" href="#home">
+          Home
+        </Nav.Link>
+        <Nav.Link className="text-white" href="#link">
+          Work
+        </Nav.Link>
+        <Nav.Link className="text-white" href="#link">
+          Contact
+        </Nav.Link>
+      </Nav>
+    </Navbar.Collapse>
+  </Navbar>
 );
 
 export default NavBar;

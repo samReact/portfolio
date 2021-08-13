@@ -18,6 +18,7 @@ const Home = () => (
       <h1
         style={{
           color: 'rgba(255,255,255,1)',
+          fontFamily: 'MyFont',
         }}
       >
         Hi I'm Samir
@@ -32,6 +33,7 @@ const Home = () => (
       <h1
         style={{
           color: 'rgba(255,255,255,1)',
+          fontFamily: 'MyFont',
         }}
       >
         {'<'} FrontEnd Developer {'/>'}

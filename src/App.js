@@ -1,7 +1,14 @@
 import './App.css';
+import NavBar from './components/NavBar';
+import Home from './parts/Home';
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <NavBar />
+      <Home />
+    </div>
+  );
 }
 
 export default App;

@@ -1,8 +1,8 @@
 .background {
   background: center / cover url('./assets/img/home-laptop.jpg');
   width: 100%;
-  height: 100%;
-  position: absolute;
+  height: 100vh;
+  /* position: absolute; */
 }
 
 .layer {
@@ -11,5 +11,5 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }

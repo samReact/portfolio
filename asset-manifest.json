@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.45648f6a.chunk.css",
-    "main.js": "/portfolio/static/js/main.5e0bd02c.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.5e0bd02c.chunk.js.map",
-    "runtime-main.js": "/portfolio/static/js/runtime-main.fb90b8d4.js",
-    "runtime-main.js.map": "/portfolio/static/js/runtime-main.fb90b8d4.js.map",
-    "static/js/2.a71bd2d2.chunk.js": "/portfolio/static/js/2.a71bd2d2.chunk.js",
-    "static/js/2.a71bd2d2.chunk.js.map": "/portfolio/static/js/2.a71bd2d2.chunk.js.map",
-    "static/js/3.b6369619.chunk.js": "/portfolio/static/js/3.b6369619.chunk.js",
-    "static/js/3.b6369619.chunk.js.map": "/portfolio/static/js/3.b6369619.chunk.js.map",
-    "index.html": "/portfolio/index.html",
-    "static/css/main.45648f6a.chunk.css.map": "/portfolio/static/css/main.45648f6a.chunk.css.map",
-    "static/js/2.a71bd2d2.chunk.js.LICENSE.txt": "/portfolio/static/js/2.a71bd2d2.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/portfolio/static/media/SourceCodePro-Regular.70cc7ff2.ttf",
-    "static/media/Home.css": "/portfolio/static/media/home-laptop.2f0d6089.jpg"
+    "main.css": "/static/css/main.fd039fed.chunk.css",
+    "main.js": "/static/js/main.5e0bd02c.chunk.js",
+    "main.js.map": "/static/js/main.5e0bd02c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f0a5d100.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f0a5d100.js.map",
+    "static/js/2.a71bd2d2.chunk.js": "/static/js/2.a71bd2d2.chunk.js",
+    "static/js/2.a71bd2d2.chunk.js.map": "/static/js/2.a71bd2d2.chunk.js.map",
+    "static/js/3.b6369619.chunk.js": "/static/js/3.b6369619.chunk.js",
+    "static/js/3.b6369619.chunk.js.map": "/static/js/3.b6369619.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.fd039fed.chunk.css.map": "/static/css/main.fd039fed.chunk.css.map",
+    "static/js/2.a71bd2d2.chunk.js.LICENSE.txt": "/static/js/2.a71bd2d2.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/static/media/SourceCodePro-Regular.70cc7ff2.ttf",
+    "static/media/Home.css": "/static/media/home-laptop.2f0d6089.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.fb90b8d4.js",
+    "static/js/runtime-main.f0a5d100.js",
     "static/js/2.a71bd2d2.chunk.js",
-    "static/css/main.45648f6a.chunk.css",
+    "static/css/main.fd039fed.chunk.css",
     "static/js/main.5e0bd02c.chunk.js"
   ]
 }

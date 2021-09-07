@@ -40,11 +40,11 @@ const Home = () => (
             },
           },
           size: {
-            value: 3,
+            value: 6,
             random: true,
             animation: {
               enable: false,
-              speed: 20,
+              speed: 5,
               minimumValue: 0.1,
               sync: false,
             },
@@ -58,7 +58,7 @@ const Home = () => (
           },
           move: {
             enable: true,
-            speed: 6,
+            speed: 1,
             direction: 'none',
             random: false,
             straight: false,
@@ -92,9 +92,9 @@ const Home = () => (
             },
             bubble: {
               distance: 400,
-              size: 40,
+              size: 8,
               duration: 2,
-              opacity: 0.8,
+              opacity: 1,
             },
             repulse: {
               distance: 200,

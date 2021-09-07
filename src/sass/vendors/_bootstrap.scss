@@ -2,6 +2,9 @@ $theme-colors: (
   'info': tomato,
   'danger': teal,
   'custom-color': #900,
+  'primary': #39bb88,
 );
+$font-family-base: 'myfont';
+$navbar-dark-brand-color: #39bb88;
 
 @import '~bootstrap/scss/bootstrap';

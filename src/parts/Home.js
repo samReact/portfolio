@@ -1,5 +1,4 @@
 import Particles from 'react-particles-js';
-import '../Home.css';
 
 const Home = () => (
   <>
@@ -29,18 +28,8 @@ const Home = () => (
           stroke: {
             width: 1,
           },
-          opacity: {
-            value: 0.5,
-            random: false,
-            animation: {
-              enable: false,
-              speed: 3,
-              minimumValue: 0.1,
-              sync: false,
-            },
-          },
           size: {
-            value: 6,
+            value: 2,
             random: true,
             animation: {
               enable: false,
@@ -53,8 +42,8 @@ const Home = () => (
             enable: true,
             distance: 100,
             color: '#ffffff',
-            opacity: 1,
-            width: 2,
+            opacity: 0.2,
+            width: 3,
           },
           move: {
             enable: true,
@@ -77,42 +66,29 @@ const Home = () => (
               enable: true,
               mode: 'repulse',
             },
-            onClick: {
-              enable: true,
-              mode: 'push',
-            },
             resize: true,
           },
           modes: {
             grab: {
-              distance: 400,
+              distance: 200,
               links: {
-                opacity: 1,
+                opacity: 0.6,
               },
             },
             bubble: {
               distance: 400,
-              size: 8,
+              size: 2,
               duration: 2,
-              opacity: 1,
+              opacity: 0.2,
             },
             repulse: {
-              distance: 200,
-            },
-            push: {
-              quantity: 4,
-            },
-            remove: {
-              quantity: 2,
+              distance: 100,
             },
           },
         },
         detectRetina: true,
         background: {
           color: '#000000',
-          image: '',
-          position: '50% 50%',
-          repeat: 'no-repeat',
           size: 'cover',
         },
       }}

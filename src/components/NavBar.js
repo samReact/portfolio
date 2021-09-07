@@ -1,10 +1,8 @@
 import { Nav, Navbar } from 'react-bootstrap';
 
 const NavBar = () => (
-  <Navbar expand="lg" fixed="top" className="text-white">
-    <Navbar.Brand href="#home" className="text-white">
-      SL
-    </Navbar.Brand>
+  <Navbar expand="lg" fixed="top" variant="dark">
+    <Navbar.Brand href="#home">SL</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mr-auto text-white">

@@ -1,9 +1,36 @@
 import { useState } from 'react';
-import { Button, Col, Container, Form, Row } from 'react-bootstrap';
-import { CSSTransition } from 'react-transition-group';
+import {
+  Button,
+  Col,
+  Container,
+  Form,
+  InputGroup,
+  Row,
+  Spinner,
+} from 'react-bootstrap';
 
 const Contact = () => {
-  const [inProp, setInProp] = useState(false);
+  const [form, setForm] = useState({ name: '', email: '', message: '' });
+  const [loading, setLoading] = useState(false);
+  const [validated, setValidated] = useState(false);
+  const [messageSent, setMessageSent] = useState(false);
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.id]: e.target.value });
+  };
+  const handleSubmit = (e) => {
+    const form1 = e.currentTarget;
+    if (form1.checkValidity() === false) {
+      e.preventDefault();
+      e.stopPropagation();
+      setValidated(true);
+    } else if (form1.checkValidity() === true) {
+      console.log(form);
+      e.preventDefault();
+      setLoading(true);
+      setMessageSent(true);
+    }
+  };
   return (
     <div style={{ height: '100vh', backgroundColor: '#000' }}>
       <Container
@@ -17,32 +44,77 @@ const Contact = () => {
       >
         <Row className="justify-content-center">
           <Col lg={6}>
-            <Form>
-              <Form.Group
-                className="mb-3"
-                controlId="exampleForm.ControlInput1"
-              >
+            <Form noValidate validated={validated} onSubmit={handleSubmit}>
+              <Form.Group className="mb-3" controlId="name">
                 <Form.Label className="text-white">Name</Form.Label>
-                <Form.Control type="text" />
+                <InputGroup hasValidation>
+                  <Form.Control
+                    type="text"
+                    aria-describedby="name"
+                    value={form.name}
+                    onChange={handleChange}
+                    maxLength="15"
+                    required
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    Please enter your name.
+                  </Form.Control.Feedback>
+                </InputGroup>
               </Form.Group>
-              <Form.Group
-                className="mb-3"
-                controlId="exampleForm.ControlInput2"
-              >
+              <Form.Group className="mb-3" controlId="email">
                 <Form.Label className="text-white">Email address</Form.Label>
-                <Form.Control type="email" placeholder="name@example.com" />
+                <InputGroup hasValidation>
+                  <Form.Control
+                    type="email"
+                    placeholder="name@example.com"
+                    aria-describedby="email"
+                    value={form.email}
+                    onChange={handleChange}
+                    required
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    Please enter your email.
+                  </Form.Control.Feedback>
+                </InputGroup>
               </Form.Group>
-              <Form.Group
-                className="mb-3"
-                controlId="exampleForm.ControlTextarea1"
-              >
+              <Form.Group className="mb-3" controlId="message">
                 <Form.Label className="text-white">Your message</Form.Label>
-                <Form.Control as="textarea" rows={3} />
+                <InputGroup hasValidation>
+                  <Form.Control
+                    type="text"
+                    aria-describedby="message"
+                    as="textarea"
+                    rows={3}
+                    maxLength="200"
+                    value={form.message}
+                    onChange={handleChange}
+                    required
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    Please enter a message.
+                  </Form.Control.Feedback>
+                </InputGroup>
               </Form.Group>
-              <Button variant="primary" type="submit">
-                Submit
-              </Button>
+              {loading ? (
+                <Button variant="primary" disabled>
+                  <Spinner
+                    as="span"
+                    animation="grow"
+                    size="sm"
+                    role="status"
+                    aria-hidden="true"
+                  />{' '}
+                  Sending...
+                </Button>
+              ) : (
+                <Button variant="primary" type="submit">
+                  Submit
+                </Button>
+              )}
             </Form>
+            {messageSent && (
+              <p className="text-white">Your message has been sent !</p>
+            )}
           </Col>
         </Row>
       </Container>

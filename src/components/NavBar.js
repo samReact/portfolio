@@ -11,10 +11,10 @@ const NavBar = () => (
         <Nav.Link className="text-white" href="/">
           Home
         </Nav.Link>
-        <Nav.Link className="text-white" href="/portfolio">
+        <Nav.Link className="text-white" href="/works">
           Portfolio
         </Nav.Link>
-        <Nav.Link className="text-white" href="#link">
+        <Nav.Link className="text-white" href="/contact">
           Contact
         </Nav.Link>
       </Nav>

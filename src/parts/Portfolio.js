@@ -2,7 +2,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import laptop from '../assets/img/home-laptop.jpg';
 const Portfolio = () => {
   return (
-    <div id="portfolio" className="bg-dark" style={{ height: '100vh' }}>
+    <div style={{ height: '100vh', backgroundColor: '#000' }}>
       <Container>
         <Row style={{ paddingTop: '200px' }}>
           <Col>

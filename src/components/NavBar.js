@@ -27,9 +27,7 @@ const NavBar = () => {
             Contact
           </Nav.Link>
         </Nav>
-        <Navbar.Text className="justify-content-end">
-          Signed in as: <a href="#login">Mark Otto</a>
-        </Navbar.Text>
+        <Navbar.Text className="justify-content-end">Hello !</Navbar.Text>
       </Navbar.Collapse>
     </Navbar>
   );

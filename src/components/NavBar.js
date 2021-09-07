@@ -1,5 +1,6 @@
 import { Nav, Navbar } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
+import { GithubOutlined } from '@ant-design/icons';
 
 const NavBar = () => {
   const history = useHistory();
@@ -27,7 +28,15 @@ const NavBar = () => {
             Contact
           </Nav.Link>
         </Nav>
-        <Navbar.Text className="justify-content-end">Hello !</Navbar.Text>
+        <Nav.Link
+          className="justify-content-end"
+          href="https://github.com/samReact"
+          target="_blank"
+        >
+          <GithubOutlined
+            style={{ color: '#39bb88', fontSize: 28, cursor: 'pointer' }}
+          />
+        </Nav.Link>
       </Navbar.Collapse>
     </Navbar>
   );

@@ -107,7 +107,7 @@ const Contact = () => {
                   Sending...
                 </Button>
               ) : (
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="submit" disabled>
                   Submit
                 </Button>
               )}

@@ -1,6 +1,6 @@
 import { Nav, Navbar } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
-import { GithubOutlined } from '@ant-design/icons';
+import { GithubOutlined, LinkedinOutlined } from '@ant-design/icons';
 
 const NavBar = () => {
   const history = useHistory();
@@ -34,6 +34,15 @@ const NavBar = () => {
           target="_blank"
         >
           <GithubOutlined
+            style={{ color: '#39bb88', fontSize: 28, cursor: 'pointer' }}
+          />
+        </Nav.Link>
+        <Nav.Link
+          className="justify-content-end"
+          href="https://www.linkedin.com/in/samirlehmil/"
+          target="_blank"
+        >
+          <LinkedinOutlined
             style={{ color: '#39bb88', fontSize: 28, cursor: 'pointer' }}
           />
         </Nav.Link>

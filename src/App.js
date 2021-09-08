@@ -6,7 +6,7 @@ import Contact from './pages/Contact';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/portfolio">
       <NavBar />
       <Switch>
         <Route exact path="/">

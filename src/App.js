@@ -1,6 +1,6 @@
 import NavBar from './components/NavBar';
-import Home from './parts/Home';
-import Portfolio from './parts/Portfolio';
+import Home from './pages/Home';
+import Portfolio from './pages/Portfolio';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Contact from './pages/Contact';
 

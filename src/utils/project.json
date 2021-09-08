@@ -1,0 +1,39 @@
+{
+  "projects": [ 
+    {
+      "id": "animalTesting",
+      "name": "animal Testing",
+      "img": "coming-soon"
+    },
+       {
+      "id": "bloomin",
+      "name": "bloomin",
+      "img": "coming-soon"
+    },
+       {
+      "id": "les resto de Paris",
+      "name": "les resto de Paris",
+      "img": "coming-soon"
+    },
+        {
+      "id": "zappo",
+      "name": "zappo",
+      "img": "coming-soon"
+    },
+      {
+      "id": "helloSam",
+      "name": "helloSam",
+      "img": "coming-soon"
+    },
+      {
+      "id": "playSuisse",
+      "name": "play Suisse",
+      "img": "coming-soon"
+    },
+      {
+      "id": "smarthab",
+      "name": "smartHab virtual home",
+      "img": "coming-soon"
+    }
+  ]
+}

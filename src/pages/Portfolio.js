@@ -1,11 +1,10 @@
 import { Container, Row, Col } from 'react-bootstrap';
-// import laptop from '../assets/img/coming-soon.jpg';
 import datas from '../utils/project.json';
 
 const Portfolio = () => {
   const { projects } = datas;
   return (
-    <div style={{ minHeight: '100vh', backgroundColor: '#000' }}>
+    <div style={{ minHeight: '100vh' }}>
       <Container>
         <Row style={{ paddingTop: '200px' }}>
           {projects.map((project) => {

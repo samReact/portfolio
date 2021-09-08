@@ -88,15 +88,11 @@ const Home = () => (
         },
         detectRetina: true,
         background: {
-          color: '#000000',
           size: 'cover',
         },
       }}
     />
-    <div id="home">
-      <div className="background">
-        <div className="layer"></div>
-      </div>
+    <div>
       <div
         style={{
           left: 0,

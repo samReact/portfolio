@@ -11,6 +11,7 @@
        {
       "id": "les restos de Paris",
       "name": "les restos de Paris",
+      "logo": "lesRestos2Paris.png",
       "img": ["restos2Paris1","restos2Paris2","restos2Paris3"],
       "tags": ["web", "react","express.js","mysql", "passport.js", "material ui"]
     },

@@ -1,13 +1,16 @@
 import { Nav, Navbar } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import { GithubOutlined, LinkedinOutlined } from '@ant-design/icons';
+import logo from '../assets/img/logo.png';
 
 const NavBar = () => {
   const history = useHistory();
 
   return (
     <Navbar expand="sm" fixed="top" variant="dark">
-      <Navbar.Brand>SL</Navbar.Brand>
+      <Navbar.Brand>
+        <img src={logo} alt="logo" width={38} />
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
       <Navbar.Collapse id="basic-navbar-nav">

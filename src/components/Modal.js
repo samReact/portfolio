@@ -11,16 +11,12 @@ const ModalProject = ({ project }) => {
   return (
     <>
       <div class="logo-container" onClick={handleShow}>
-        {project.logo ? (
-          <img
-            className="logo"
-            src={`${process.env.PUBLIC_URL}/img/${project.logo}`}
-            alt="logo"
-            width="100%"
-          />
-        ) : (
-          <h6 className="text-white text-center">{project.name}</h6>
-        )}
+        <img
+          className="logo"
+          src={`${process.env.PUBLIC_URL}/img/${project.logo}`}
+          alt="logo"
+          width="100%"
+        />
         <div className="badge-container">
           {project.tags.map((tag) => (
             <Badge variant="primary" style={{ margin: 3 }}>

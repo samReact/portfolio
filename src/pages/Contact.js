@@ -42,6 +42,10 @@ const Contact = () => {
           transform: 'translateY(-50%)',
         }}
       >
+        <h1 className="text-center display-4 color-primary" variant="primary">
+          Say Hi !
+        </h1>
+
         <Row className="justify-content-center">
           <Col lg={6}>
             <Form noValidate validated={validated} onSubmit={handleSubmit}>

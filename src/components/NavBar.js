@@ -6,27 +6,15 @@ const NavBar = () => {
   const history = useHistory();
 
   return (
-    <Navbar expand="lg" fixed="top" variant="dark">
+    <Navbar expand="sm" fixed="top" variant="dark">
       <Navbar.Brand>SL</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto text-white">
-          <Nav.Link className="text-white" onClick={() => history.push('/')}>
-            Home
-          </Nav.Link>
-          <Nav.Link
-            className="text-white"
-            onClick={() => history.push('/works')}
-          >
-            Portfolio
-          </Nav.Link>
-          <Nav.Link
-            className="text-white"
-            onClick={() => history.push('/contact')}
-          >
-            Contact
-          </Nav.Link>
+        <Nav className="mr-auto">
+          <Nav.Link onClick={() => history.push('/')}>Home</Nav.Link>
+          <Nav.Link onClick={() => history.push('/works')}>Portfolio</Nav.Link>
+          <Nav.Link onClick={() => history.push('/contact')}>Contact</Nav.Link>
         </Nav>
         <Nav.Link
           className="justify-content-end"

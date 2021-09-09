@@ -7,12 +7,18 @@ const Portfolio = () => {
   const { projects } = datas;
   return (
     <div style={{ minHeight: '100vh' }}>
-      <Container>
-        <Row style={{ paddingTop: '200px' }}>
+      <Container
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          height: '100vh',
+        }}
+      >
+        <Row className="align-items-center">
           {projects.map((project) => {
             return (
-              <Col>
-                <ModalProject project={project} key={project.id} />;
+              <Col lg={3} md={4} xs={6}>
+                <ModalProject project={project} key={project.id} />
               </Col>
             );
           })}

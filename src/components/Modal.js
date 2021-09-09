@@ -6,10 +6,11 @@ const ModalProject = ({ project }) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   return (
     <>
-      <div class="logo-container">
+      <div class="logo-container" onClick={handleShow}>
         {project.logo ? (
           <img
             className="logo"

@@ -1,0 +1,22 @@
+@import '~react-awesome-slider/src/core/styles.scss';
+@import '~react-awesome-slider/src/styled/cube-animation/cube-animation.scss';
+
+.awssld {
+  --slider-height-percentage: 60%;
+  --slider-transition-duration: 700ms;
+  --organic-arrow-thickness: 4px;
+  --organic-arrow-border-radius: 0px;
+  --organic-arrow-height: 40px;
+  --organic-arrow-color: #39bb88;
+  --control-button-width: 10%;
+  --control-button-height: 25%;
+  --control-button-background: transparent;
+  --control-bullet-color: #39bb88;
+  --control-bullet-active-color: #39bb88;
+  --loader-bar-color: #39bb88;
+  --loader-bar-height: 6px;
+
+  &__bullets {
+    bottom: -70px;
+  }
+}

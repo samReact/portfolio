@@ -3,37 +3,37 @@
     {
       "id": "animalTesting",
       "name": "animal Testing",
-      "img": "coming-soon"
+      "img": ["coming-soon"]
     },
        {
       "id": "bloomin",
       "name": "bloomin",
-      "img": "coming-soon"
+      "img": ["bloomin1","bloomin2"]
     },
        {
       "id": "les resto de Paris",
       "name": "les resto de Paris",
-      "img": "coming-soon"
+      "img": ["restos2Paris1","restos2Paris2","restos2Paris3"]
     },
         {
       "id": "zappo",
       "name": "zappo",
-      "img": "coming-soon"
+      "img": ["zappo1","zappo2","zappo3","zappo4"]
     },
       {
       "id": "helloSam",
       "name": "helloSam",
-      "img": "coming-soon"
+      "img": ["helloSam1","helloSam2","helloSam3"]
     },
       {
       "id": "playSuisse",
       "name": "play Suisse",
-      "img": "coming-soon"
+      "img": ["coming-soon"]
     },
       {
       "id": "smarthab",
       "name": "smartHab virtual home",
-      "img": "coming-soon"
+      "img": ["virtualDemonstrator1","virtualDemonstrator2"]
     }
   ]
 }

@@ -1,4 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap';
+import ModalProject from '../components/Modal';
+
 import datas from '../utils/project.json';
 
 const Portfolio = () => {
@@ -9,13 +11,8 @@ const Portfolio = () => {
         <Row style={{ paddingTop: '200px' }}>
           {projects.map((project) => {
             return (
-              <Col lg={6} key={project.id} className="mt-4 mb-5">
-                <img
-                  src={process.env.PUBLIC_URL + '/img/coming-soon.jpg'}
-                  className="img-fluid"
-                  alt={project.name}
-                  title={project.name}
-                ></img>
+              <Col>
+                <ModalProject project={project} key={project.id} />;
               </Col>
             );
           })}

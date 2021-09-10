@@ -10,7 +10,7 @@ const ModalProject = ({ project }) => {
 
   return (
     <>
-      <div class="logo-container" onClick={handleShow}>
+      <div className="logo-container" onClick={handleShow}>
         <img
           className="logo"
           src={`${process.env.PUBLIC_URL}/img/${project.logo}`}
@@ -19,7 +19,7 @@ const ModalProject = ({ project }) => {
         />
         <div className="badge-container">
           {project.tags.map((tag) => (
-            <Badge variant="primary" style={{ margin: 3 }}>
+            <Badge variant="primary" style={{ margin: 3 }} key={tag}>
               {tag}
             </Badge>
           ))}
@@ -32,7 +32,10 @@ const ModalProject = ({ project }) => {
           <AwesomeSlider animation="cubeAnimation">
             {project.img.map((img) => {
               return (
-                <div data-src={`${process.env.PUBLIC_URL}/img/${img}.jpg`} />
+                <div
+                  data-src={`${process.env.PUBLIC_URL}/img/${img}.jpg`}
+                  key={img}
+                />
               );
             })}
           </AwesomeSlider>

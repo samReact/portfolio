@@ -9,6 +9,7 @@ import { Spinner } from 'react-bootstrap';
 function App() {
   const [loading, setLoading] = useState(true);
   let location = useLocation();
+  const { pathname } = location;
 
   const loadingEffect = () => {
     setTimeout(() => setLoading(false), 1000);
@@ -17,11 +18,11 @@ function App() {
   useEffect(() => {
     setLoading(true);
     loadingEffect();
-  }, [location]);
+  }, [pathname]);
 
   return (
     <>
-      <NavBar />
+      <NavBar pathname={pathname} />
       {loading ? (
         <div
           style={{
@@ -31,7 +32,6 @@ function App() {
             justifyContent: 'center',
             alignItems: 'center',
           }}
-          className="flex align-items-center justify-content-center"
         >
           <Spinner animation="grow" size="xl" variant="primary" />
         </div>

@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { GithubOutlined, LinkedinOutlined } from '@ant-design/icons';
 import logo from '../assets/img/logo.png';
 
-const NavBar = () => {
+const NavBar = ({ pathname }) => {
   const history = useHistory();
 
   return (
@@ -15,9 +15,21 @@ const NavBar = () => {
 
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link onClick={() => history.push('/')}>Home</Nav.Link>
-          <Nav.Link onClick={() => history.push('/works')}>Portfolio</Nav.Link>
-          <Nav.Link onClick={() => history.push('/contact')}>Contact</Nav.Link>
+          <Nav.Link onClick={() => history.push('/')} active={pathname === '/'}>
+            Home
+          </Nav.Link>
+          <Nav.Link
+            onClick={() => history.push('/works')}
+            active={pathname === '/works'}
+          >
+            Portfolio
+          </Nav.Link>
+          <Nav.Link
+            onClick={() => history.push('/contact')}
+            active={pathname === '/contact'}
+          >
+            Contact
+          </Nav.Link>
         </Nav>
         <Nav.Link
           className="justify-content-end"

@@ -17,8 +17,8 @@ const Portfolio = () => {
         <Row className="align-items-center">
           {projects.map((project) => {
             return (
-              <Col lg={3} md={4} xs={6}>
-                <ModalProject project={project} key={project.id} />
+              <Col lg={3} md={4} xs={6} key={project.id}>
+                <ModalProject project={project} />
               </Col>
             );
           })}

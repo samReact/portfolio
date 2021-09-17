@@ -1,6 +1,10 @@
 import { Nav, Navbar } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
-import { GithubOutlined, LinkedinOutlined } from '@ant-design/icons';
+import {
+  GithubOutlined,
+  LinkedinOutlined,
+  MailOutlined,
+} from '@ant-design/icons';
 import logo from '../assets/img/logo.png';
 
 const NavBar = ({ pathname }) => {
@@ -46,6 +50,14 @@ const NavBar = ({ pathname }) => {
           target="_blank"
         >
           <LinkedinOutlined
+            style={{ color: '#39bb88', fontSize: 28, cursor: 'pointer' }}
+          />
+        </Nav.Link>
+        <Nav.Link
+          className="justify-content-end"
+          href="mailto:sam.react001@gmail.com"
+        >
+          <MailOutlined
             style={{ color: '#39bb88', fontSize: 28, cursor: 'pointer' }}
           />
         </Nav.Link>

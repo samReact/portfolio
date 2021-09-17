@@ -51,6 +51,7 @@ const NavBar = ({ pathname }) => {
             className="justify-content-end"
             href="https://github.com/samReact"
             target="_blank"
+            style={{ padding: 8 }}
           >
             <GithubOutlined
               style={{ fontSize: 22, cursor: 'pointer' }}
@@ -61,6 +62,7 @@ const NavBar = ({ pathname }) => {
             className="justify-content-end"
             href="https://www.linkedin.com/in/samirlehmil/"
             target="_blank"
+            style={{ padding: 8 }}
           >
             <LinkedinOutlined
               style={{ fontSize: 22, cursor: 'pointer' }}
@@ -70,6 +72,7 @@ const NavBar = ({ pathname }) => {
           <Nav.Link
             className="justify-content-end"
             href="mailto:sam.react001@gmail.com"
+            style={{ padding: 8 }}
           >
             <MailOutlined
               style={{ fontSize: 22, cursor: 'pointer' }}

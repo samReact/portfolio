@@ -37,5 +37,23 @@
 }
 
 .color-primary {
-  color: #39bb88;
+  color: #01ccff;
+}
+
+.react-logo {
+  width: 30px;
+  height: 30px;
+  animation-name: spin;
+  animation-duration: 12000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  @keyframes spin {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
 }

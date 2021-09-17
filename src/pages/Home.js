@@ -19,7 +19,7 @@ const Home = () => (
           style={{
             width: '200px',
             height: '1px',
-            backgroundColor: '#39bb88',
+            backgroundColor: '#01ccff',
           }}
         />
         <h1 className="text-white">

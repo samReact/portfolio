@@ -1,8 +1,7 @@
 $theme-colors: (
-  'custom-color': #900,
-  'primary': #39bb88,
+  // 'primary': #39bb88,
+  'primary': #01ccff
 );
 $font-family-base: 'myfont';
-$navbar-dark-brand-color: #39bb88;
 
 @import '~bootstrap/scss/bootstrap';

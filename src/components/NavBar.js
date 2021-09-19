@@ -1,18 +1,23 @@
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import {
   GithubOutlined,
   LinkedinOutlined,
   MailOutlined,
 } from '@ant-design/icons';
-import logo from '../assets/img/logo.png';
 import reactLogo from '../assets/img/react-logo.png';
+import sun from '../assets/img/sun.svg';
+import moon from '../assets/img/moon.svg';
 
-const NavBar = ({ pathname }) => {
+const NavBar = ({ pathname, theme, setTheme }) => {
   const history = useHistory();
 
   return (
-    <Navbar expand="sm" fixed="top" variant="dark">
+    <Navbar
+      expand="sm"
+      fixed="top"
+      variant={theme === 'dark' ? 'dark' : 'light'}
+    >
       <Container fluid>
         <Navbar.Brand>
           <img
@@ -33,6 +38,13 @@ const NavBar = ({ pathname }) => {
               active={pathname === '/'}
             >
               Home
+            </Nav.Link>
+            <Nav.Link
+              onClick={() => history.push('/about')}
+              active={pathname === '/about'}
+              disabled
+            >
+              About
             </Nav.Link>
             <Nav.Link
               onClick={() => history.push('/works')}
@@ -79,6 +91,21 @@ const NavBar = ({ pathname }) => {
               className="color-primary"
             />
           </Nav.Link>
+          <Button
+            variant="light"
+            title={
+              theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'
+            }
+          >
+            <img
+              onClick={(e) => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              src={theme === 'dark' ? sun : moon}
+              alt="dark"
+              width={32}
+              height={32}
+              className="theme-img"
+            />
+          </Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>

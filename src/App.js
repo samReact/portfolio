@@ -5,9 +5,13 @@ import { Switch, Route, useLocation } from 'react-router-dom';
 import Contact from './pages/Contact';
 import { useEffect, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
+import { useLocalStorage } from './hooks/useLocalStorage';
+import Footer from './components/Footer';
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [theme, setTheme] = useLocalStorage('theme', 'dark');
+
   let location = useLocation();
   const { pathname } = location;
 
@@ -20,9 +24,17 @@ function App() {
     loadingEffect();
   }, [pathname]);
 
+  useEffect(() => {
+    const body = document.body;
+    if (theme === 'light') {
+      return body.classList.add('-light');
+    }
+    body.classList.remove('-light');
+  }, [theme]);
+
   return (
     <>
-      <NavBar pathname={pathname} />
+      <NavBar pathname={pathname} theme={theme} setTheme={setTheme} />
       {loading ? (
         <div
           style={{
@@ -38,16 +50,17 @@ function App() {
       ) : (
         <Switch>
           <Route exact path="/">
-            <Home />
+            <Home theme={theme} />
           </Route>
           <Route path="/works">
-            <Portfolio />
+            <Portfolio theme={theme} />
           </Route>
           <Route path="/contact">
-            <Contact />
+            <Contact theme={theme} />
           </Route>
         </Switch>
       )}
+      <Footer theme={theme} />
     </>
   );
 }

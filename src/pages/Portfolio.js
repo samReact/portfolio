@@ -3,7 +3,7 @@ import ModalProject from '../components/Modal';
 
 import datas from '../utils/project.json';
 
-const Portfolio = () => {
+const Portfolio = ({ theme }) => {
   const { projects } = datas;
   return (
     <div style={{ minHeight: '100vh' }}>
@@ -18,7 +18,7 @@ const Portfolio = () => {
           {projects.map((project) => {
             return (
               <Col lg={3} md={4} xs={6} key={project.id}>
-                <ModalProject project={project} />
+                <ModalProject project={project} theme={theme} />
               </Col>
             );
           })}

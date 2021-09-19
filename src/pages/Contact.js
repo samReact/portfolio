@@ -9,7 +9,7 @@ import {
   Spinner,
 } from 'react-bootstrap';
 
-const Contact = () => {
+const Contact = ({ theme }) => {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [loading, setLoading] = useState(false);
   const [validated, setValidated] = useState(false);
@@ -31,8 +31,9 @@ const Contact = () => {
       setMessageSent(true);
     }
   };
+
   return (
-    <div style={{ height: '100vh', backgroundColor: '#000' }}>
+    <div style={{ height: '100vh' }}>
       <Container
         style={{
           left: 0,
@@ -100,7 +101,7 @@ const Contact = () => {
                 </InputGroup>
               </Form.Group>
               {loading ? (
-                <Button variant="primary" disabled>
+                <Button disabled>
                   <Spinner
                     as="span"
                     animation="grow"
@@ -111,7 +112,11 @@ const Contact = () => {
                   Sending...
                 </Button>
               ) : (
-                <Button variant="primary" type="submit" disabled>
+                <Button
+                  variant={theme === 'dark' ? 'primary' : 'outline-primary'}
+                  type="submit"
+                  disabled
+                >
                   Submit
                 </Button>
               )}

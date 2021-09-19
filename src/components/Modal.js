@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Badge, Modal } from 'react-bootstrap';
 import AwesomeSlider from 'react-awesome-slider';
 
-const ModalProject = ({ project }) => {
+const ModalProject = ({ project, theme }) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -10,10 +10,19 @@ const ModalProject = ({ project }) => {
 
   return (
     <>
-      <div className="logo-container" onClick={handleShow}>
+      <div
+        className={`logo-container ${
+          project.name === 'zappo' && theme === 'light' ? 'bg-dark' : null
+        }`}
+        onClick={handleShow}
+      >
         <img
           className="logo"
-          src={`${process.env.PUBLIC_URL}/img/${project.logo}`}
+          src={`${process.env.PUBLIC_URL}/img/${
+            project.logo_light && theme === 'light'
+              ? project.logo_light
+              : project.logo
+          }`}
           alt="logo"
           width="100%"
         />

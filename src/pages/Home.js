@@ -1,8 +1,8 @@
 import ParticlesComponent from '../components/Particles';
 
-const Home = () => (
+const Home = ({ theme }) => (
   <>
-    <ParticlesComponent />
+    <ParticlesComponent theme={theme} />
     <div>
       <div
         style={{
@@ -14,7 +14,7 @@ const Home = () => (
           transform: 'translateY(-50%)',
         }}
       >
-        <h1 className="text-white">Hi I'm Samir</h1>
+        <h1 className="theme-color">Hi I'm Samir</h1>
         <hr
           style={{
             width: '200px',
@@ -22,7 +22,7 @@ const Home = () => (
             backgroundColor: '#01ccff',
           }}
         />
-        <h1 className="text-white">
+        <h1 className="theme-color">
           {'<'} FrontEnd Developer {'/>'}
         </h1>
       </div>

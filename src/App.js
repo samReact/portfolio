@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
 import { useLocalStorage } from './hooks/useLocalStorage';
 import Footer from './components/Footer';
+import About from './pages/About';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -51,6 +52,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Home theme={theme} />
+          </Route>
+          <Route exact path="/about">
+            <About theme={theme} />
           </Route>
           <Route path="/works">
             <Portfolio theme={theme} />

@@ -42,7 +42,6 @@ const NavBar = ({ pathname, theme, setTheme }) => {
             <Nav.Link
               onClick={() => history.push('/about')}
               active={pathname === '/about'}
-              disabled
             >
               About
             </Nav.Link>
@@ -55,6 +54,7 @@ const NavBar = ({ pathname, theme, setTheme }) => {
             <Nav.Link
               onClick={() => history.push('/contact')}
               active={pathname === '/contact'}
+              disabled
             >
               Contact
             </Nav.Link>

@@ -1,4 +1,4 @@
-import Particles from 'react-particles-js';
+import Particles from 'react-tsparticles';
 
 const ParticlesComponent = ({ theme }) => {
   const linkColor = theme === 'dark' ? '#ffffff' : '#000000';
@@ -12,7 +12,7 @@ const ParticlesComponent = ({ theme }) => {
         },
         particles: {
           number: {
-            value: 180,
+            value: 110,
             density: {
               enable: true,
               area: 800,
@@ -22,7 +22,7 @@ const ParticlesComponent = ({ theme }) => {
             value: '#01ccff',
             animation: {
               enable: true,
-              speed: 10,
+              speed: 50,
               sync: true,
             },
           },
@@ -41,7 +41,7 @@ const ParticlesComponent = ({ theme }) => {
           },
           links: {
             enable: true,
-            distance: 100,
+            distance: 180,
             color: linkColor,
             opacity: 0.2,
             width: 3,
@@ -60,33 +60,26 @@ const ParticlesComponent = ({ theme }) => {
             },
           },
         },
-        interactivity: {
-          detectsOn: 'window',
-          events: {
-            onHover: {
-              enable: true,
-              mode: 'repulse',
-            },
-            resize: true,
-          },
-          modes: {
-            grab: {
-              distance: 200,
-              links: {
-                opacity: 0.6,
-              },
-            },
-            bubble: {
-              distance: 400,
-              size: 2,
-              duration: 2,
-              opacity: 0.2,
-            },
-            repulse: {
-              distance: 100,
-            },
-          },
-        },
+        // interactivity: {
+        //   detectsOn: 'window',
+        //   modes: {
+        //     grab: {
+        //       distance: 500,
+        //       links: {
+        //         opacity: 0.6,
+        //       },
+        //     },
+        //     bubble: {
+        //       distance: 400,
+        //       size: 2,
+        //       duration: 2,
+        //       opacity: 0.2,
+        //     },
+        //     repulse: {
+        //       distance: 100,
+        //     },
+        //   },
+        // },
         detectRetina: true,
         background: {
           size: 'cover',

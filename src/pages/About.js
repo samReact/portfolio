@@ -1,42 +1,30 @@
 import Chart from 'chart.js/auto';
 import { useEffect } from 'react';
+import { Button, Col, Container, Row } from 'react-bootstrap';
+import { useChartData } from '../hooks/useChartData';
+import { skills } from '../utils/datas';
 
 const About = ({ theme }) => {
+  const [
+    backgroundColors,
+    borderColors,
+    typeDatas,
+    type,
+    setType,
+  ] = useChartData();
+
   useEffect(() => {
     var ctx = 'myChart';
     Chart.defaults.datasets.line.showLine = false;
     var myChart = new Chart(ctx, {
       type: 'polarArea',
       data: {
-        labels: [
-          'javascript',
-          'es6',
-          'reactJS',
-          'reactNative',
-          'typescript',
-          'expressJS',
-          'postcss',
-          'scrum',
-        ],
+        labels: typeDatas.map((type) => type.name),
         datasets: [
           {
-            data: [8, 9, 9, 9, 7, 7, 7, 8],
-            backgroundColor: [
-              'rgba(255, 99, 132, 0.2)',
-              'rgba(54, 162, 235, 0.2)',
-              'rgba(255, 206, 86, 0.2)',
-              'rgba(75, 192, 192, 0.2)',
-              'rgba(153, 102, 255, 0.2)',
-              'rgba(255, 159, 64, 0.2)',
-            ],
-            borderColor: [
-              'rgba(255, 99, 132, 1)',
-              'rgba(54, 162, 235, 1)',
-              'rgba(255, 206, 86, 1)',
-              'rgba(75, 192, 192, 1)',
-              'rgba(153, 102, 255, 1)',
-              'rgba(255, 159, 64, 1)',
-            ],
+            data: typeDatas.map((type) => type.level),
+            backgroundColor: backgroundColors,
+            borderColor: borderColors,
             borderWidth: 1,
           },
         ],
@@ -45,11 +33,9 @@ const About = ({ theme }) => {
         scales: {
           r: {
             ticks: {
-              color: 'red',
               display: false,
             },
             grid: {
-              color: 'red',
               display: false,
             },
           },
@@ -57,21 +43,34 @@ const About = ({ theme }) => {
       },
     });
     return () => myChart.destroy();
-  }, []);
+  }, [typeDatas, backgroundColors, borderColors]);
 
+  const types = Object.keys(skills);
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '100vh',
-      }}
-    >
-      <div style={{ width: 400 }}>
-        <canvas id="myChart" />
-      </div>
-    </div>
+    <Container style={{ height: '100vh', marginTop: 150 }}>
+      <Row className="align-items-center justify-content-center">
+        <Col sm={6} md={4}>
+          <Row className="d-flex justify-content-center">
+            {types.map((elt) => (
+              <Button
+                size="sm"
+                type="button"
+                onClick={() => setType(elt)}
+                disabled={elt === type}
+                className="m-2"
+              >
+                {elt}
+              </Button>
+            ))}
+          </Row>
+        </Col>
+        <Col sm={6} md={8} className="d-flex justify-content-center mt-5">
+          <div style={{ width: '80%' }}>
+            <canvas id="myChart" />
+          </div>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

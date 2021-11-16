@@ -6,6 +6,8 @@ import {
   MailOutlined,
 } from '@ant-design/icons';
 import reactLogo from '../assets/img/react-logo.png';
+import etherumLogo from '../assets/img/etherum.png';
+
 import sun from '../assets/img/sun.svg';
 import moon from '../assets/img/moon.svg';
 
@@ -20,14 +22,15 @@ const NavBar = ({ pathname, theme, setTheme }) => {
     >
       <Container fluid>
         <Navbar.Brand>
+          <img src={etherumLogo} className="mr-1" alt="logo" width={28} />
+          SL
+          {''}
           <img
             src={reactLogo}
-            className="react-logo d-inline-block align-top"
+            className="react-logo d-inline-block align-top ml-2"
             alt="logo"
             width={38}
           />
-          {''}
-          SL
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
@@ -50,13 +53,6 @@ const NavBar = ({ pathname, theme, setTheme }) => {
               active={pathname === '/works'}
             >
               Portfolio
-            </Nav.Link>
-            <Nav.Link
-              onClick={() => history.push('/contact')}
-              active={pathname === '/contact'}
-              disabled
-            >
-              Contact
             </Nav.Link>
           </Nav>
           <Nav.Link

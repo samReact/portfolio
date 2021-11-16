@@ -47,7 +47,7 @@ const About = ({ theme }) => {
 
   const types = Object.keys(skills);
   return (
-    <Container style={{ height: '100vh', marginTop: 150 }}>
+    <Container style={{ marginTop: '10vh' }}>
       <Row className="align-items-center justify-content-center">
         <Col sm={6} md={4}>
           <Row className="d-flex justify-content-center">

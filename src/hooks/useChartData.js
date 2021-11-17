@@ -11,6 +11,7 @@ const {
   css,
   ide,
   databases,
+  libraries,
 } = skills;
 
 export function useChartData() {
@@ -44,7 +45,7 @@ export function useChartData() {
         return setTypeDatas(languages);
       case 'tools':
         return setTypeDatas(tools);
-      case 'versionning':
+      case 'versioning':
         return setTypeDatas(versioning);
       case 'css':
         return setTypeDatas(css);
@@ -58,6 +59,8 @@ export function useChartData() {
         return setTypeDatas(ide);
       case 'databases':
         return setTypeDatas(databases);
+      case 'libraries':
+        return setTypeDatas(libraries);
       default:
         return setTypeDatas(languages);
     }

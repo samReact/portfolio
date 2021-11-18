@@ -24,10 +24,10 @@ export function useChartData() {
     return Math.floor(Math.random() * max);
   }
 
-  const generateColor = useCallback((length) => {
+  const generateColor = (arg) => {
     let backgroundColors = [];
     let borderColors = [];
-    let arr = new Array(length);
+    let arr = new Array(arg);
     [...arr].map(() => {
       let a = getRandomInt(255);
       let b = getRandomInt(255);
@@ -37,7 +37,7 @@ export function useChartData() {
     });
     setBackgroundColors(backgroundColors);
     setBorderColors(borderColors);
-  }, []);
+  };
 
   useEffect(() => {
     let datas;
@@ -78,7 +78,8 @@ export function useChartData() {
     }
     generateColor(datas.length);
     setTypeDatas(datas);
-  }, [type, generateColor]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [type]);
 
   return [backgroundColors, borderColors, typeDatas, type, setType];
 }

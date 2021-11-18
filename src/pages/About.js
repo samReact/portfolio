@@ -4,46 +4,44 @@ import { Button, Col, Container, Row } from 'react-bootstrap';
 import { useChartData } from '../hooks/useChartData';
 import { skills } from '../utils/datas';
 
-const About = ({ theme }) => {
-  const [
-    backgroundColors,
-    borderColors,
-    typeDatas,
-    type,
-    setType,
-  ] = useChartData();
+const About = () => {
+  const [typeDatas, type, setType] = useChartData();
 
   useEffect(() => {
-    var ctx = 'myChart';
-    Chart.defaults.datasets.line.showLine = false;
-    var myChart = new Chart(ctx, {
-      type: 'polarArea',
-      data: {
-        labels: typeDatas.map((type) => type.name),
-        datasets: [
-          {
-            data: typeDatas.map((type) => type.level),
-            backgroundColor: backgroundColors,
-            borderColor: borderColors,
-            borderWidth: 1,
-          },
-        ],
-      },
-      options: {
-        scales: {
-          r: {
-            ticks: {
-              display: false,
+    if (typeDatas) {
+      const { backgroundColors, borderColors, datas } = typeDatas;
+
+      var ctx = 'myChart';
+      Chart.defaults.datasets.line.showLine = false;
+      var myChart = new Chart(ctx, {
+        type: 'polarArea',
+        data: {
+          labels: datas.map((type) => type.name),
+          datasets: [
+            {
+              data: datas.map((type) => type.level),
+              backgroundColor: backgroundColors,
+              borderColor: borderColors,
+              borderWidth: 1,
             },
-            grid: {
-              display: false,
+          ],
+        },
+        options: {
+          scales: {
+            r: {
+              ticks: {
+                display: false,
+              },
+              grid: {
+                display: false,
+              },
             },
           },
         },
-      },
-    });
-    return () => myChart.destroy();
-  }, [typeDatas, backgroundColors, borderColors]);
+      });
+      return () => myChart.destroy();
+    }
+  }, [typeDatas]);
 
   const types = Object.keys(skills);
   return (

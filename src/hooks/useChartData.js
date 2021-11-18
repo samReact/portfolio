@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { skills } from '../utils/datas';
 
 const {
@@ -16,18 +16,16 @@ const {
 
 export function useChartData() {
   const [type, setType] = useState('languages');
-  const [typeDatas, setTypeDatas] = useState(languages);
-  const [backgroundColors, setBackgroundColors] = useState([]);
-  const [borderColors, setBorderColors] = useState([]);
+  const [typeDatas, setTypeDatas] = useState(null);
 
   function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
 
-  const generateColor = (arg) => {
+  const generateColor = (datas) => {
     let backgroundColors = [];
     let borderColors = [];
-    let arr = new Array(arg);
+    let arr = new Array(datas.length);
     [...arr].map(() => {
       let a = getRandomInt(255);
       let b = getRandomInt(255);
@@ -35,8 +33,7 @@ export function useChartData() {
       backgroundColors.push(`rgba(${a}, ${b}, ${c}, ${0.2})`);
       borderColors.push(`rgba(${a}, ${b}, ${c}, ${1})`);
     });
-    setBackgroundColors(backgroundColors);
-    setBorderColors(borderColors);
+    setTypeDatas({ backgroundColors, borderColors, datas });
   };
 
   useEffect(() => {
@@ -76,10 +73,9 @@ export function useChartData() {
         datas = languages;
         break;
     }
-    generateColor(datas.length);
-    setTypeDatas(datas);
+    generateColor(datas);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [type]);
 
-  return [backgroundColors, borderColors, typeDatas, type, setType];
+  return [typeDatas, type, setType];
 }

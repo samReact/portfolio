@@ -25,14 +25,13 @@ export function useChartData() {
   const generateColor = (datas) => {
     let backgroundColors = [];
     let borderColors = [];
-    let arr = new Array(datas.length);
-    [...arr].map(() => {
+    for (let i = 0; i < datas.length; i++) {
       let a = getRandomInt(255);
       let b = getRandomInt(255);
       let c = getRandomInt(255);
       backgroundColors.push(`rgba(${a}, ${b}, ${c}, ${0.2})`);
       borderColors.push(`rgba(${a}, ${b}, ${c}, ${1})`);
-    });
+    }
     setTypeDatas({ backgroundColors, borderColors, datas });
   };
 

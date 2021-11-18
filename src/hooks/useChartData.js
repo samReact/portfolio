@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { skills } from '../utils/datas';
 
 const {
@@ -24,10 +24,11 @@ export function useChartData() {
     return Math.floor(Math.random() * max);
   }
 
-  function generateColor(datas) {
+  const generateColor = useCallback((length) => {
     let backgroundColors = [];
     let borderColors = [];
-    datas.map(() => {
+    let arr = new Array(length);
+    [...arr].map(() => {
       let a = getRandomInt(255);
       let b = getRandomInt(255);
       let c = getRandomInt(255);
@@ -36,35 +37,48 @@ export function useChartData() {
     });
     setBackgroundColors(backgroundColors);
     setBorderColors(borderColors);
-  }
+  }, []);
 
   useEffect(() => {
-    generateColor(typeDatas);
+    let datas;
     switch (type) {
       case 'languages':
-        return setTypeDatas(languages);
+        datas = languages;
+        break;
       case 'tools':
-        return setTypeDatas(tools);
+        datas = tools;
+        break;
       case 'versioning':
-        return setTypeDatas(versioning);
+        datas = versioning;
+        break;
       case 'css':
-        return setTypeDatas(css);
+        datas = css;
+        break;
       case 'devops':
-        return setTypeDatas(devops);
+        datas = devops;
+        break;
       case 'testing':
-        return setTypeDatas(testing);
+        datas = testing;
+        break;
       case 'softskills':
-        return setTypeDatas(softskills);
+        datas = softskills;
+        break;
       case 'ide':
-        return setTypeDatas(ide);
+        datas = ide;
+        break;
       case 'databases':
-        return setTypeDatas(databases);
+        datas = databases;
+        break;
       case 'libraries':
-        return setTypeDatas(libraries);
+        datas = libraries;
+        break;
       default:
-        return setTypeDatas(languages);
+        datas = languages;
+        break;
     }
-  }, [type]);
+    generateColor(datas.length);
+    setTypeDatas(datas);
+  }, [type, generateColor]);
 
   return [backgroundColors, borderColors, typeDatas, type, setType];
 }

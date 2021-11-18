@@ -53,6 +53,7 @@ const About = ({ theme }) => {
           <Row className="d-flex justify-content-center">
             {types.map((elt) => (
               <Button
+                key={elt}
                 size="sm"
                 type="button"
                 onClick={() => setType(elt)}

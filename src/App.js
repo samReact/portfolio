@@ -32,7 +32,6 @@ function App() {
     }
     body.classList.remove('-light');
   }, [theme]);
-  console.log('test');
 
   return (
     <>

@@ -25,7 +25,6 @@ const Contact = ({ theme }) => {
       e.stopPropagation();
       setValidated(true);
     } else if (form1.checkValidity() === true) {
-      console.log(form);
       e.preventDefault();
       setLoading(true);
       setMessageSent(true);

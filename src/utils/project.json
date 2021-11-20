@@ -62,6 +62,22 @@
       "logo": "smarthab_logo.png",
       "url": "https://smarthab.fr/",
       "tags": ["web", "react", "socket.io"]
+    },
+    {
+      "id": "animalTesting",
+      "name": "animal Testing",
+      "img": ["animalTesting1", "animalTesting2"],
+      "logo": "animalTesting_logo.png",
+      "url": "https://animaltesting.fr/",
+      "tags": ["mobile", "react native", "native base", "expo"]
+    },
+    {
+      "id": "justLearn",
+      "name": "justLearn",
+      "img": ["justLearn1", "justLearn2", "justLearn3"],
+      "logo": "justLearn_logo.png",
+      "url": "",
+      "tags": ["web", "react", "nextjs", "nestJs", "antDesign", "stripe"]
     }
   ]
 }

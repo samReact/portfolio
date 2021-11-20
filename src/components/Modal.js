@@ -12,7 +12,10 @@ const ModalProject = ({ project, theme }) => {
     <>
       <div
         className={`logo-container ${
-          project.name === 'zappo' && theme === 'light' ? 'bg-dark' : null
+          (project.name === 'zappo' || project.name === 'animal Testing') &&
+          theme === 'light'
+            ? 'bg-dark'
+            : null
         }`}
         onClick={handleShow}
       >

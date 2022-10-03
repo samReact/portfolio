@@ -12,6 +12,7 @@ const Home = ({ theme }) => (
           position: 'absolute',
           top: '50%',
           transform: 'translateY(-50%)',
+          zIndex: -1,
         }}
       >
         <h1 className="theme-color">Hi I'm Samir</h1>

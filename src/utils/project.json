@@ -78,6 +78,14 @@
       "logo": "justLearn_logo.png",
       "url": "",
       "tags": ["web", "react", "nextjs", "nestJs", "antDesign", "stripe"]
+    },
+    {
+      "id": "epfl",
+      "name": "EPFL",
+      "img": ["coming-soon"],
+      "logo": "epfl_logo.png",
+      "url": "https://www.epfl.ch",
+      "tags": ["web", "react", "material ui", "redux"]
     }
   ]
 }

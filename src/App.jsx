@@ -1,13 +1,13 @@
-import NavBar from './components/NavBar';
-import Home from './pages/Home';
-import Portfolio from './pages/Portfolio';
+import NavBar from './components/NavBar.jsx';
+import Home from './pages/Home.jsx';
+import Portfolio from './pages/Portfolio.jsx';
 import { Switch, Route, useLocation } from 'react-router-dom';
-import Contact from './pages/Contact';
+import Contact from './pages/Contact.jsx';
 import { useEffect, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
-import { useLocalStorage } from './hooks/useLocalStorage';
-import Footer from './components/Footer';
-import About from './pages/About';
+import { useLocalStorage } from './hooks/useLocalStorage.jsx';
+import Footer from './components/Footer.jsx';
+import About from './pages/About.jsx';
 
 function App() {
   const [loading, setLoading] = useState(true);

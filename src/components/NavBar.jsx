@@ -1,19 +1,16 @@
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import { useHistory } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import {
   GithubOutlined,
   LinkedinOutlined,
   MailOutlined,
 } from '@ant-design/icons';
 import reactLogo from '../assets/img/react-logo.png';
-import etherumLogo from '../assets/img/etherum.png';
 
 import sun from '../assets/img/sun.svg';
 import moon from '../assets/img/moon.svg';
 
 const NavBar = ({ pathname, theme, setTheme }) => {
-  const history = useHistory();
-
   return (
     <Navbar
       collapseOnSelect
@@ -22,9 +19,6 @@ const NavBar = ({ pathname, theme, setTheme }) => {
     >
       <Container fluid>
         <Navbar.Brand>
-          <img src={etherumLogo} className="mr-1" alt="logo" width={28} />
-          SL
-          {''}
           <img
             src={reactLogo}
             className="react-logo d-inline-block align-top ml-2"
@@ -36,23 +30,24 @@ const NavBar = ({ pathname, theme, setTheme }) => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link
-              onClick={() => history.push('/')}
-              active={pathname === '/'}
-              href="#"
+              as={NavLink}
+              to="/"
+              active={pathname === '/portfolio'}
+              exact
             >
               Home
             </Nav.Link>
             <Nav.Link
-              onClick={() => history.push('/about')}
-              active={pathname === '/about'}
-              href="#"
+              as={NavLink}
+              to="/about"
+              active={pathname === '/portfolio/about'}
             >
               About
             </Nav.Link>
             <Nav.Link
-              onClick={() => history.push('/works')}
-              active={pathname === '/works'}
-              href="#"
+              as={NavLink}
+              to="/works"
+              active={pathname === '/porfolio/works'}
             >
               Portfolio
             </Nav.Link>

@@ -86,6 +86,22 @@
       "logo": "epfl_logo.png",
       "url": "https://www.epfl.ch",
       "tags": ["web", "react", "material ui", "redux"]
+    },
+    {
+      "id": "certiwatch",
+      "name": "Certiwatch",
+      "img": ["certiwatch1", "certiwatch2", "certiwatch3", "certiwatch4"],
+      "logo": "certiwatch_logo.png",
+      "url": "",
+      "tags": [
+        "hardhat",
+        "react",
+        "antd",
+        "redux",
+        "solidity",
+        "wagmi",
+        "expressjs"
+      ]
     }
   ]
 }
